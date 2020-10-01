@@ -1,0 +1,26 @@
+{% extends 'base.html' %}{% import 'macros.html' as macro%} {% block content %}
+
+<div class="container space">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h1> Welcome to The Blogger!</h1>
+            <p class="lead"> Bloggers Hub</p>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h4> <i>{{quote}}</i> </h4>
+            <p><b> ~ {{ quote_author }} </b></p>
+
+            {% if current_user.is_authenticated %}
+            <p><a href="{{url_for('main.blogs')}}"><button class="button bview">View Blogs</button></p>
+            {% else %}
+            <a href="{{url_for('auth.login')}}"></a> {%endif%}
+        </div>
+    </div>
+</div>
+
+{% endblock%}

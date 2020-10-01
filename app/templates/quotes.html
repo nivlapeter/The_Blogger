@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div class="container move">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="artitle"> Coding Quotes </h2>
+        </div>
+
+        {% for index in quote %}
+        <div class="col-sm-6">
+            <h4> {{index.author}}</h4>
+            <p> {{index.quote}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
