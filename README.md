@@ -1,4 +1,4 @@
-# Pitch App
+# The Blogger
 
 ## Description
 
